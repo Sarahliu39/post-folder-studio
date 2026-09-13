@@ -74,3 +74,44 @@ Report issues with the app version, macOS version, chip model, reproduction step
 
 本仓库用于分发安装包、展示软件和发布更新，不公开应用源代码。  
 This repository distributes application builds, documentation and update information. Application source code is not published here.
+
+
+<a id="premiere-plugin"></a>
+## Premiere Pro 配套插件 · Premiere Pro Companion Plugin
+
+**Post Folder Studio for Premiere · v1.0.6 · UXP**
+
+将桌面版的目录规划带入 Premiere Pro。插件读取 Post Folder Studio 导出的 `.pfs-template.json`，在当前 Premiere 项目中创建对应的 Bin 层级。
+
+Bring your folder plan into Premiere Pro. The plugin reads a `.pfs-template.json` exported from Post Folder Studio and creates the corresponding bin hierarchy in the current Premiere project.
+
+| 中文 | English |
+| --- | --- |
+| 使用模板中的项目名称创建根 Bin，并补齐子层级。 | Creates a root bin using the template project name and fills in the hierarchy. |
+| 只创建缺失的 Bin，不删除、移动或重命名已有 Bin 和素材。 | Creates missing bins without deleting, moving or renaming existing bins or media. |
+| 再次同步同一模板时复用已有结构，避免重复创建。 | Reuses the existing structure when syncing the same template again. |
+| 回读验证创建结果，显示新建、已有和已验证数量。 | Reads back the results and reports created, existing and verified counts. |
+
+### 使用流程 · Workflow
+
+**导出模板 → 选择模板 → 确认当前项目 → 同步 Bin**  
+**Export template → Choose template → Confirm project → Sync bins**
+
+1. 在 Post Folder Studio 中选择或编辑结构，点击“导出模板…”。  
+   Select or edit a structure in Post Folder Studio and choose **Export Template**.
+2. 在 Premiere 打开目标项目及 **窗口 → UXP 插件 → Post Folder Studio** 面板。  
+   Open the target project and **Window → UXP Plugins → Post Folder Studio** panel.
+3. 点击“选择模板…”，选择导出的 JSON 文件。  
+   Click **Choose Template** and select the exported JSON file.
+4. 核对当前项目名称，点击“同步到 Premiere”，查看结果。  
+   Confirm the current project name, click **Sync to Premiere**, and review the result.
+
+### 环境与分发 · Requirements & Distribution
+
+插件清单要求 **Premiere Pro 25.6+**。随附说明的开发加载方式使用 **Adobe UXP Developer Tool 2.2+**：添加插件源文件中的 `manifest.json`，然后点击 **Load**。
+
+The manifest requires **Premiere Pro 25.6+**. The included development-loading instructions use **Adobe UXP Developer Tool 2.2+**: add the plugin source `manifest.json`, then click **Load**.
+
+> 此插件只同步 Bin 结构，不导入素材或编辑时间线。它是独立配套组件，不包含在桌面版 DMG 中；桌面版自动更新不负责更新此 UXP 插件。
+>
+> The plugin synchronizes bin structure only; it does not import media or edit timelines. It is a separate companion, not bundled in the desktop DMG. The desktop updater does not update this UXP plugin.
