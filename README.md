@@ -8,7 +8,13 @@
   <img alt="macOS 13 or later" src="https://img.shields.io/badge/macOS-13%2B-596579?style=flat-square" />
   <img alt="Apple Silicon" src="https://img.shields.io/badge/Apple-Silicon-596579?style=flat-square" />
 </p>
-<p align="center"><a href="https://github.com/Sarahliu39/post-folder-studio/releases/latest">下载 DMG · Download</a> · <a href="#features">功能 · Features</a> · <a href="#installation">安装 · Installation</a> · <a href="https://github.com/Sarahliu39/post-folder-studio/issues">反馈 · Feedback</a></p>
+<p align="center">
+  <a href="https://github.com/Sarahliu39/post-folder-studio/releases/latest">下载 DMG · Download</a> · 
+  <a href="https://github.com/Sarahliu39/post-folder-studio/releases/latest/download/Post-Folder-Studio-Premiere.ccx">Premiere 插件 · PR Plugin</a> ·
+  <a href="#features">功能 · Features</a> · 
+  <a href="#installation">安装 · Installation</a> · 
+  <a href="https://github.com/Sarahliu39/post-folder-studio/issues">反馈 · Feedback</a>
+</p>
 
 ## 界面演示 · Interface Demo
 
